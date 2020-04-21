@@ -15,7 +15,7 @@ A new Flutter plugin.
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'YoutubeKit'
+  s.dependency 'YoutubeKit', :git => 'https://github.com/davidgalarza/YoutubeKit.git'
 
   s.ios.deployment_target = '11.0'
 end
