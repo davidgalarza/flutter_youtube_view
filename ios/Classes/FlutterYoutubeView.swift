@@ -8,7 +8,7 @@
 
 import Foundation
 import Flutter
-import YoutubeKit
+import YoutubeKitSoun
 import AVKit
 
 enum VideoScaleMode: Int {
