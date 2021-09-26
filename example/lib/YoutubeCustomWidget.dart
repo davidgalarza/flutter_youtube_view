@@ -91,7 +91,7 @@ class _MyAppState extends State<YoutubeCustomWidget>
   void _changePlaybackRate(PlaybackRate playbackRate) {
     setState(() {
       _playbackRate = playbackRate;
-      _controller.setPlaybackRate(playbackRate);
+      _controller.setPlaybackRate(rate: playbackRate);
     });
   }
 
@@ -112,7 +112,7 @@ class _MyAppState extends State<YoutubeCustomWidget>
                       videoId: 'gcj2RUWQZ60',
                       showUI: false,
                       startSeconds: 0.0,
-                      autoPlay: false,
+                      autoPlay: true,
                   ),
                 )),
             Column(

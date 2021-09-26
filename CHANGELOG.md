@@ -1,5 +1,18 @@
+## 2.0.2
+Update android plugin
+## 2.0.1
+https://github.com/hoanglm4/flutter_youtube_view/issues/68
+## 2.0.0
+https://github.com/hoanglm4/flutter_youtube_view/issues/64
+## 1.1.10
+https://github.com/hoanglm4/flutter_youtube_view/issues/60
+https://github.com/hoanglm4/flutter_youtube_view/issues/57
+## 1.1.9
+Change ios Deployment Target to 9.0
+
 ## 1.1.8
 Migrate SWIFT 5, androidX
+
 ## 1.1.7
 Bug fix: App is crashed when start in background
 
