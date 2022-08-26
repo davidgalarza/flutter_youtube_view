@@ -1,4 +1,4 @@
-package com.hoanglm.flutteryoutubeview
+package com.hoanglm.flutteryoutubeviewplus
 
 import android.content.Context
 import android.os.Handler
@@ -24,7 +24,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 
-class FlutterYoutubeView(
+class FlutterYoutubeViewPlus(
         private val context: Context,
         id: Int,
         private val params: HashMap<String, *>,
