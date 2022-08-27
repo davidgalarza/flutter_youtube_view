@@ -15,7 +15,7 @@ Flutter plugin to view Youtube videos. Fixed Bundle problem and added parameter 
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
-  s.dependency 'YoutubeKitSoun'
+  s.dependency 'YoutubeKit'
 
   s.ios.deployment_target = '9.0'
 end

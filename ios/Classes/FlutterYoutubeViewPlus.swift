@@ -8,7 +8,7 @@
 
 import Foundation
 import Flutter
-import YoutubeKitSoun
+import YoutubeKit
 import AVKit
 
 enum VideoScaleMode: Int {
@@ -202,7 +202,7 @@ class FlutterYoutubeViewPlus: NSObject, FlutterPlatformView {
                                 webkit.messageHandlers.onUpdateCurrentTime.postMessage(time);
                              }
                          }
-                         window.setInterval(updateTime, 500);
+                         window.setInterval(updateTime, 100);
                          });
                          function onReady(event) {
                              webkit.messageHandlers.onReady.postMessage('');
