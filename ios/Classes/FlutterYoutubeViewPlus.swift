@@ -132,7 +132,6 @@ class FlutterYoutubeViewPlus: NSObject, FlutterPlatformView {
                 VideoEmbedParameter.videoID(videoId),
                 VideoEmbedParameter.loopVideo(false),
                 VideoEmbedParameter.showRelatedVideo(false),
-                VideoEmbedParameter.showInfo(true),
                 VideoEmbedParameter.autoplay(autoPlay),
                 VideoEmbedParameter.registerStartTimeAt(Int(startSeconds)),
 
@@ -145,7 +144,6 @@ class FlutterYoutubeViewPlus: NSObject, FlutterPlatformView {
                 VideoEmbedParameter.videoID(videoId),
                 VideoEmbedParameter.loopVideo(false),
                 VideoEmbedParameter.showRelatedVideo(false),
-                VideoEmbedParameter.showInfo(false),
                 VideoEmbedParameter.showControls(VideoControlAppearance.hidden),
                 VideoEmbedParameter.autoplay(autoPlay),
                 VideoEmbedParameter.registerStartTimeAt(Int(startSeconds)),
