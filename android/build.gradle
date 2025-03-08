@@ -27,6 +27,9 @@ apply plugin: 'kotlin-android'
 
 
 android {
+
+    namespace "com.hoanglm.flutteryoutubeviewplus" 
+    
     compileSdkVersion 31
 
     sourceSets {
