@@ -6,5 +6,6 @@ enum class Options(val value: String) {
     SHOW_UI("showUI"),
     AUTO_PLAY("autoPlay"),
     SHOW_YOUTUBE_BUTTON("showYoutube"),
-    SHOW_FULL_SCREEN_BUTTON("showFullScreen")
+    SHOW_FULL_SCREEN_BUTTON("showFullScreen"),
+    ORIGIN("origin")
 }
