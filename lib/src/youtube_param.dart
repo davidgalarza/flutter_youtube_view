@@ -14,5 +14,5 @@ class YoutubeParam {
       this.autoPlay = true,
       this.showFullScreen = true,
       this.showYoutube = true,
-      this.origin = "https://youtube.com"});
+      this.origin = "https://www.youtube.com"});
 }
