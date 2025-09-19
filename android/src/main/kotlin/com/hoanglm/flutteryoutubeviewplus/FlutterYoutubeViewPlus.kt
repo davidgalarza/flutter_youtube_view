@@ -8,10 +8,12 @@ import android.view.Gravity
 import android.view.View
 import android.webkit.WebView
 import android.widget.FrameLayout
+import com.hoanglm.flutteryoutubeviewplus.BuildConfig
 import androidx.lifecycle.Lifecycle
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.options.IFramePlayerOptions
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.DefaultPlayerUiController
 import io.flutter.plugin.common.BinaryMessenger
@@ -87,7 +89,12 @@ class FlutterYoutubeViewPlus(
         val showYoutubeButton = params[Options.SHOW_YOUTUBE_BUTTON.value] as? Boolean ?: true
         val showFullScreenButton = params[Options.SHOW_FULL_SCREEN_BUTTON.value] as? Boolean ?: true
 
-        youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+        // Fix for YouTube referer issue - set origin to app id
+        val iFramePlayerOptions = IFramePlayerOptions.Builder()
+            .origin("https://${BuildConfig.APPLICATION_ID}")
+            .build()
+
+        val youTubePlayerListener = object : AbstractYouTubePlayerListener() {
             override fun onReady(youTubePlayer: YouTubePlayer) {
                 val defaultPlayerUiController =
                     DefaultPlayerUiController(youtubePlayerView, youTubePlayer)
@@ -130,7 +137,13 @@ class FlutterYoutubeViewPlus(
             override fun onCurrentSecond(youTubePlayer: YouTubePlayer, second: Float) {
                 methodChannel.invokeMethod("onCurrentSecond", second)
             }
-        })
+        }
+
+        // Initialize the YouTube player with the custom options
+        youtubePlayerView.initialize(
+            youTubePlayerListener = youTubePlayerListener,
+            playerOptions = iFramePlayerOptions
+        )
 
         // runs until channel is closed
         job = GlobalScope.launch {
