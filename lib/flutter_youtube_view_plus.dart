@@ -65,6 +65,7 @@ class _FlutterYoutubeViewState extends State<FlutterYoutubeViewPlus> {
           "autoPlay": widget.params.autoPlay,
           "showYoutube": widget.params.showYoutube,
           "showFullScreen": widget.params.showFullScreen,
+          "origin": widget.params.origin,
         },
         creationParamsCodec: StandardMessageCodec(),
       );
