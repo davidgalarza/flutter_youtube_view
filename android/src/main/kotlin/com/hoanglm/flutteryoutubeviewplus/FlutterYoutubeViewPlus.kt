@@ -91,7 +91,7 @@ class FlutterYoutubeViewPlus(
         val showFullScreenButton = params[Options.SHOW_FULL_SCREEN_BUTTON.value] as? Boolean ?: true
 
         val customOrigin = params[Options.ORIGIN.value] as? String
-        val origin = customOrigin ?: "https://youtube.com"
+        val origin = customOrigin ?: "https://www.youtube.com"
 
         val iFramePlayerOptions = IFramePlayerOptions.Builder()
             .origin(origin)
