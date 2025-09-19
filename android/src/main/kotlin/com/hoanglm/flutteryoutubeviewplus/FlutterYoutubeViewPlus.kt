@@ -8,7 +8,6 @@ import android.view.Gravity
 import android.view.View
 import android.webkit.WebView
 import android.widget.FrameLayout
-import com.hoanglm.flutteryoutubeviewplus.BuildConfig
 import androidx.lifecycle.Lifecycle
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
