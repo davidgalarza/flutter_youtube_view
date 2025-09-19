@@ -89,9 +89,13 @@ class FlutterYoutubeViewPlus(
         val showYoutubeButton = params[Options.SHOW_YOUTUBE_BUTTON.value] as? Boolean ?: true
         val showFullScreenButton = params[Options.SHOW_FULL_SCREEN_BUTTON.value] as? Boolean ?: true
 
-        // Fix for YouTube referer issue - set origin to app id
+        // Get origin from parameters, fallback to https://youtube.com
+        val customOrigin = params[Options.ORIGIN.value] as? String
+        val origin = customOrigin ?: "https://youtube.com"
+
+        // Fix for YouTube referer issue - set origin to custom or default
         val iFramePlayerOptions = IFramePlayerOptions.Builder()
-            .origin("https://${BuildConfig.APPLICATION_ID}")
+            .origin(origin)
             .build()
 
         val youTubePlayerListener = object : AbstractYouTubePlayerListener() {
