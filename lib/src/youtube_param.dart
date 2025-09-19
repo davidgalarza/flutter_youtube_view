@@ -5,6 +5,7 @@ class YoutubeParam {
   final bool autoPlay;
   final bool showYoutube;
   final bool showFullScreen;
+  final String origin;
 
   const YoutubeParam(
       {required this.videoId,
@@ -12,5 +13,6 @@ class YoutubeParam {
       this.startSeconds = 0.0,
       this.autoPlay = true,
       this.showFullScreen = true,
-      this.showYoutube = true});
+      this.showYoutube = true,
+      this.origin = "https://youtube.com"});
 }
